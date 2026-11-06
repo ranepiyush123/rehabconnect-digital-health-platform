@@ -2,7 +2,7 @@ import os
 os.environ['DATABASE_URL']='sqlite://'
 from sqlalchemy.pool import StaticPool
 from fastapi.testclient import TestClient
-from app import main
+import main
 
 # Shared in-memory DB for test isolation from local demo data.
 main.engine.dispose()
